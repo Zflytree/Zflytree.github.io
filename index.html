@@ -156,35 +156,196 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CSSS选择器总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/hello-world/">Hello World</a>
+      <a class="article-title" href="/2018/07/30/CSSS选择器总结/">CSSS选择器总结</a>
     </h1>
   
 
         
-        <a href="/2018/07/28/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-28T15:15:02.634Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
+        <a href="/2018/07/30/CSSS选择器总结/" class="archive-article-date">
+  	<time datetime="2018-07-30T12:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <blockquote>
+<p>在css的学习中有一个很容易让人混乱的就是css选择器，因为选择器有很多种，而且在使用的时候有些类似，有些却相差很远。那么本文就对css选择器，作为一个集中的总结梳理。（注：文中代码因篇幅有限仅写出关键部分代码）</p>
+</blockquote>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/adHqXOax7jl5MDrzAqVq3ibxLBgDiczmtaH9K0oBpicMZribaibD4LGiakYfllUNAicNiche3ibUoMwoq9QPGHHjMD52xjg/640?wx_fmt=jpeg" alt="img"></p>
+<h2 id="id和class"><a href="#id和class" class="headerlink" title="id和class"></a>id和class</h2><ul>
+<li><p>id  </p>
+<p>在元素的属性里加上id标签，然后用“#+id名选择”，如</p>
+<p><code>\#z {text-align:center;}   &lt;p id=&quot;z&quot;&gt;id标签&lt;/p&gt;</code></p>
+</li>
+<li><p>class </p>
+<p>在元素的属性里加上class标签，然后用”.class名称”选择所有具有相同class名称的元素。如：</p>
+<p><code>*.center {text-align:center;}*</code></p>
+<p><code>*&lt;h1 class=&quot;center&quot;&gt;flytree&lt;/h1&gt;*</code></p>
+<p><code>*&lt;p class=&quot;center&quot;&gt;this line an h1 are centered&lt;/p&gt;*</code></p>
+<p><code>也可使特定的元素使用class，如：</code></p>
+<p><code>*p.center {text-align:center;}*</code></p>
+<p><code>*&lt;h1 class=&quot;center&quot;&gt;flytree&lt;/h1&gt;*</code></p>
+<p><code>*&lt;p class=&quot;center&quot;&gt;only this line is centered&lt;/p&gt;*</code></p>
+</li>
+<li><p>混合 </p>
+</li>
+</ul>
+<p>当id和class选择的是同一元素的相同属性时，显示id的效果，如：</p>
+<p><code>*&lt;style&gt;*</code></p>
+<p><code>*.center*</code></p>
+<p><code>*{*</code></p>
+<p>​    <em>text-align:center;</em></p>
+<p><code>*}*</code></p>
+<p><code>*#z {text-align:right;}*</code></p>
+<p><code>*&lt;/style&gt;*</code></p>
+<p><code>*&lt;/head&gt;*</code></p>
+<p><code>*&lt;body&gt;*</code></p>
+<p><code>*&lt;h1 id=&quot;z&quot; class=&quot;center&quot;&gt;同一属性，显示id选择的效果&lt;/h1&gt;*</code></p>
+<p><code>*&lt;/body&gt;*</code></p>
+<h2 id="分组和嵌套"><a href="#分组和嵌套" class="headerlink" title="分组和嵌套"></a>分组和嵌套</h2><ul>
+<li>分组 </li>
+</ul>
+<p>当多个元素有共同的css样式描述时可以使用分组减少代码，如：</p>
+<p><code>*#a,#b,#c {color:blue;}*</code></p>
+<p><code>*&lt;p id=&quot;a&quot;&gt;text&lt;/a&gt;*</code></p>
+<p><code>*&lt;p id=&quot;b&quot;&gt;test&lt;/a&gt;*</code></p>
+<p><code>*&lt;p id=&quot;c&quot;&gt;text&lt;/a&gt;*</code></p>
+<ul>
+<li>嵌套 </li>
+</ul>
+<p>当要操作元素内部的子元素时可以使用嵌套来进行操作，如：</p>
+<p><code>*div p {text-align:center;}*</code></p>
+<p><code>*&lt;div&gt;*</code></p>
+<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
+<p><code>*&lt;/div&gt;*</code></p>
+<h2 id="组合选择符"><a href="#组合选择符" class="headerlink" title="组合选择符"></a>组合选择符</h2><ul>
+<li>后代选取器 </li>
+</ul>
+<p>以空格分隔,选取改元素的所有后代，其实就是嵌套的选择的格式啦，如：</p>
+<p><code>*div p {text-align:center;}*</code></p>
+<p><code>*&lt;div&gt;*</code></p>
+<p><code>*&lt;div&gt; &lt;p&gt;name&lt;/p&gt; &lt;/div&gt;*</code></p>
+<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
+<p><code>*&lt;/div&gt;*</code></p>
+<p>则name和age都会居中，选择的只要是后代就行，可以是子元素的子元</p>
+<ul>
+<li>子元素选择器 </li>
+</ul>
+<p>以大于号分隔，子选取元素的直接后代，如：</p>
+<p><code>*div&gt;p {text-align:center;}*</code></p>
+<p><code>*&lt;div&gt;*</code></p>
+<p><code>*&lt;div&gt; &lt;p&gt;name&lt;/p&gt; &lt;/div&gt;*</code></p>
+<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
+<p><code>*&lt;/div&gt;*</code></p>
+<p>则只有age会居中显示</p>
+<ul>
+<li>相邻兄弟选择器 </li>
+</ul>
+<p>以加号分隔，若元素有共同的父元素，则可以选择紧接在另一元素后的元素，如：</p>
+<p><code>*div+h1 {color:blue;}*</code></p>
+<p><code>*&lt;div&gt;*</code></p>
+<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
+<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
+<p><code>*&lt;/div&gt;*</code></p>
+<p><code>*&lt;h1&gt;test&lt;/h1&gt;*</code></p>
+<p>则test的颜色会为蓝色</p>
+<ul>
+<li>普通兄弟选择器 </li>
+</ul>
+<p>以波浪号分隔，若元素有共同的父元素，选取所有指定元素之后的相邻兄弟元素，如：</p>
+<p><code>*div~p {color:blue;}*</code></p>
+<p><code>*&lt;div&gt;*</code></p>
+<p><code>*&lt;h1&gt;test&lt;/h1&gt;*</code></p>
+<p><code>*&lt;/div&gt;*</code></p>
+<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
+<p><code>*&lt;p&gt;age&lt;/age&gt;*</code></p>
+<p>则name和age都会被选择变为蓝色。</p>
+<h2 id="属性选择符"><a href="#属性选择符" class="headerlink" title="属性选择符"></a>属性选择符</h2><ul>
+<li>简单属性选择 </li>
+</ul>
+<p>[属性]使用，无论什么属性，该选择器会选择所有具有该属性的元素，如：</p>
+<p><code>*a[href] {color:green;}*</code></p>
+<p><code>*&lt;a href=&quot;http://www.baidu.com&quot;&gt;baidu&lt;/a&gt;*</code></p>
+<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<p>则所有具有href属性的元素都会被选择，baidu和sina就会为绿色。</p>
+<p>可以选择多属性，如：</p>
+<p><code>*a[href][title] {color:green;}*</code></p>
+<p><code>*&lt;a href=&quot;http://www.baidu.com&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;*</code></p>
+<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<p>则只有”百度“会变绿。</p>
+<ul>
+<li>属性值选择 </li>
+</ul>
+<p>选择具体到属性的具体属性值，如：</p>
+<p><code>*a[href=&quot;http://www.baidu.com&quot;] {color:green;}*</code></p>
+<p><code>*&lt;a href=&quot;http://www.baidu.com&quot;&gt;baidu&lt;/a&gt;*</code></p>
+<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<p>则只有baidu会变绿。</p>
+<p>也可以选择多个属性值，如：</p>
+<p><code>*a[href=&quot;http://www.baidu.com&quot;][title=&quot;baidu&quot;]*</code></p>
+<p><code>*{background-color:green;}*</code></p>
+<p><code>*&lt;a href=&quot;http://www.baidu.com&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;*</code></p>
+<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<p>则只有”百度“会变绿。</p>
+<ul>
+<li>属性，属性值部分匹配 </li>
+</ul>
+<p>可以用波浪号”~“只匹配部分进行选择（可以想成约等于），如：</p>
+<p><code>*img[title~=&quot;a&quot;] {border:1px solid black;}*</code></p>
+<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a&quot;&gt;*</code></p>
+<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a 1&quot;/&gt;*</code></p>
+<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a 2&quot;/&gt;*</code></p>
+<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a_2&quot;/&gt;*</code></p>
+<p>前三行都会匹配，但是a_2不匹配（要用子串匹配属性选择器）。</p>
+<ul>
+<li>子串匹配属性选择器 <img src="https://mmbiz.qpic.cn/mmbiz_png/adHqXOax7jl5MDrzAqVq3ibxLBgDiczmta2h7W7Izq3XzFuQkpGAkibNWsF8gTIZeEaXRLZGMFdW8gxiaBAOeWAEicw/640?wx_fmt=png" alt="img"></li>
+</ul>
+<h2 id="伪类和伪元素"><a href="#伪类和伪元素" class="headerlink" title="伪类和伪元素"></a>伪类和伪元素</h2><ul>
+<li>伪类 </li>
+</ul>
+<p>应用在链接里的伪类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123;color: #FF0000&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:visited &#123;color: #00FF00&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:hover &#123;color: #FF00FF&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:active &#123;color: #0000FF&#125;</span><br></pre></td></tr></table></figure>
+<p>first-child伪类</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/adHqXOax7jl5MDrzAqVq3ibxLBgDiczmtaxTYHCFqLG474qKHEP4GFkDMZCj6flNialkToRtDb2gJhRARLIgUgwlQ/640?wx_fmt=jpeg" alt="img"></p>
+<ul>
+<li>伪元素 </li>
+</ul>
+<p><strong>first-line：</strong></p>
+<p>用于相文中首行设置样式，且只应用于块级元素，可设置的属性有：</p>
+<p>font</p>
+<p>color</p>
+<p>background</p>
+<p>word-spacing</p>
+<p>letter-spacing</p>
+<p>text-decoration</p>
+<p>vertical-align</p>
+<p>text-transform</p>
+<p>line-height</p>
+<p>clear</p>
+<p><strong>first-letter：</strong><br>用于设置文本首个字符的样式，且只能用于块级元素，可设置的属性有：</p>
+<p>font</p>
+<p>color</p>
+<p>background</p>
+<p>margin</p>
+<p>padding</p>
+<p>border</p>
+<p>text-decoration</p>
+<p>text-transform</p>
+<p>vertical-align (仅当 float 为 none 时)</p>
+<p>clear</p>
+<p>line-height</p>
+<p>float</p>
 
       
 
@@ -193,11 +354,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/28/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/07/30/CSSS选择器总结/">展开全文 >></a>
         </p>
       
 
@@ -318,6 +490,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

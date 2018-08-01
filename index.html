@@ -179,135 +179,85 @@
         <blockquote>
 <p>在css的学习中有一个很容易让人混乱的就是css选择器，因为选择器有很多种，而且在使用的时候有些类似，有些却相差很远。那么本文就对css选择器，作为一个集中的总结梳理。（注：文中代码因篇幅有限仅写出关键部分代码）</p>
 </blockquote>
-<p><img src="http://img.hb.aicdn.com/808c646c2fee41777e8499ec38844616343a21454478-0dAvyH" alt=""></p>
+<p><img src="https://i.loli.net/2018/08/01/5b610bb28ad6f.jpeg" alt=""></p>
 <h2 id="id和class"><a href="#id和class" class="headerlink" title="id和class"></a>id和class</h2><ul>
 <li><p>id  </p>
 <p>在元素的属性里加上id标签，然后用“#+id名选择”，如</p>
-<p><code>\#z {text-align:center;}   &lt;p id=&quot;z&quot;&gt;id标签&lt;/p&gt;</code></p>
-</li>
-<li><p>class </p>
-<p>在元素的属性里加上class标签，然后用”.class名称”选择所有具有相同class名称的元素。如：</p>
-<p><code>*.center {text-align:center;}*</code></p>
-<p><code>*&lt;h1 class=&quot;center&quot;&gt;flytree&lt;/h1&gt;*</code></p>
-<p><code>*&lt;p class=&quot;center&quot;&gt;this line an h1 are centered&lt;/p&gt;*</code></p>
-<p><code>也可使特定的元素使用class，如：</code></p>
-<p><code>*p.center {text-align:center;}*</code></p>
-<p><code>*&lt;h1 class=&quot;center&quot;&gt;flytree&lt;/h1&gt;*</code></p>
-<p><code>*&lt;p class=&quot;center&quot;&gt;only this line is centered&lt;/p&gt;*</code></p>
-</li>
-<li><p>混合 </p>
 </li>
 </ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#z &#123;text-align:center;&#125;   <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"z"</span>&gt;</span>id标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>class </p>
+<p>在元素的属性里加上class标签，然后用”.class名称”选择所有具有相同class名称的元素。如：</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.center &#123;text-align:center;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>flytree<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>this line an h1 are centered<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--也可使特定的元素使用class，如：--&gt;</span></span><br><span class="line">p.center &#123;text-align:center;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>flytree<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>only this line is centered<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>混合 </li>
+</ul>
 <p>当id和class选择的是同一元素的相同属性时，显示id的效果，如：</p>
-<p><code>*&lt;style&gt;*</code></p>
-<p><code>*.center*</code></p>
-<p><code>*{*</code></p>
-<p>​    <em>text-align:center;</em></p>
-<p><code>*}*</code></p>
-<p><code>*#z {text-align:right;}*</code></p>
-<p><code>*&lt;/style&gt;*</code></p>
-<p><code>*&lt;/head&gt;*</code></p>
-<p><code>*&lt;body&gt;*</code></p>
-<p><code>*&lt;h1 id=&quot;z&quot; class=&quot;center&quot;&gt;同一属性，显示id选择的效果&lt;/h1&gt;*</code></p>
-<p><code>*&lt;/body&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.center</span></span><br><span class="line"><span class="undefined">&#123;</span></span><br><span class="line"><span class="undefined">	*text-align:center;*</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">#z &#123;text-align:right;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"z"</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>同一属性，显示id选择的效果<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="分组和嵌套"><a href="#分组和嵌套" class="headerlink" title="分组和嵌套"></a>分组和嵌套</h2><ul>
 <li>分组 </li>
 </ul>
 <p>当多个元素有共同的css样式描述时可以使用分组减少代码，如：</p>
-<p><code>*#a,#b,#c {color:blue;}*</code></p>
-<p><code>*&lt;p id=&quot;a&quot;&gt;text&lt;/a&gt;*</code></p>
-<p><code>*&lt;p id=&quot;b&quot;&gt;test&lt;/a&gt;*</code></p>
-<p><code>*&lt;p id=&quot;c&quot;&gt;text&lt;/a&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#a,#b,#c &#123;color:blue;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"a"</span>&gt;</span>text<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"b"</span>&gt;</span>test<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"c"</span>&gt;</span>text<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>嵌套 </li>
 </ul>
 <p>当要操作元素内部的子元素时可以使用嵌套来进行操作，如：</p>
-<p><code>*div p {text-align:center;}*</code></p>
-<p><code>*&lt;div&gt;*</code></p>
-<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
-<p><code>*&lt;/div&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div p &#123;text-align:center;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>name<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="组合选择符"><a href="#组合选择符" class="headerlink" title="组合选择符"></a>组合选择符</h2><ul>
 <li>后代选取器 </li>
 </ul>
 <p>以空格分隔,选取改元素的所有后代，其实就是嵌套的选择的格式啦，如：</p>
-<p><code>*div p {text-align:center;}*</code></p>
-<p><code>*&lt;div&gt;*</code></p>
-<p><code>*&lt;div&gt; &lt;p&gt;name&lt;/p&gt; &lt;/div&gt;*</code></p>
-<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
-<p><code>*&lt;/div&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div p &#123;text-align:center;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> <span class="tag">&lt;<span class="name">p</span>&gt;</span>name<span class="tag">&lt;/<span class="name">p</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>age<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则name和age都会居中，选择的只要是后代就行，可以是子元素的子元</p>
 <ul>
 <li>子元素选择器 </li>
 </ul>
 <p>以大于号分隔，子选取元素的直接后代，如：</p>
-<p><code>*div&gt;p {text-align:center;}*</code></p>
-<p><code>*&lt;div&gt;*</code></p>
-<p><code>*&lt;div&gt; &lt;p&gt;name&lt;/p&gt; &lt;/div&gt;*</code></p>
-<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
-<p><code>*&lt;/div&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div&gt;p &#123;text-align:center;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span> <span class="tag">&lt;<span class="name">p</span>&gt;</span>name<span class="tag">&lt;/<span class="name">p</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>age<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则只有age会居中显示</p>
 <ul>
 <li>相邻兄弟选择器 </li>
 </ul>
 <p>以加号分隔，若元素有共同的父元素，则可以选择紧接在另一元素后的元素，如：</p>
-<p><code>*div+h1 {color:blue;}*</code></p>
-<p><code>*&lt;div&gt;*</code></p>
-<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
-<p><code>*&lt;p&gt;age&lt;/p&gt;*</code></p>
-<p><code>*&lt;/div&gt;*</code></p>
-<p><code>*&lt;h1&gt;test&lt;/h1&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div+h1 &#123;color:blue;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>name<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>age<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>test<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则test的颜色会为蓝色</p>
 <ul>
 <li>普通兄弟选择器 </li>
 </ul>
 <p>以波浪号分隔，若元素有共同的父元素，选取所有指定元素之后的相邻兄弟元素，如：</p>
-<p><code>*div~p {color:blue;}*</code></p>
-<p><code>*&lt;div&gt;*</code></p>
-<p><code>*&lt;h1&gt;test&lt;/h1&gt;*</code></p>
-<p><code>*&lt;/div&gt;*</code></p>
-<p><code>*&lt;p&gt;name&lt;/p&gt;*</code></p>
-<p><code>*&lt;p&gt;age&lt;/age&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div~p &#123;color:blue;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>test<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>name<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>age<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则name和age都会被选择变为蓝色。</p>
 <h2 id="属性选择符"><a href="#属性选择符" class="headerlink" title="属性选择符"></a>属性选择符</h2><ul>
 <li>简单属性选择 </li>
 </ul>
 <p>[属性]使用，无论什么属性，该选择器会选择所有具有该属性的元素，如：</p>
-<p><code>*a[href] {color:green;}*</code></p>
-<p><code>*&lt;a href=&quot;http://www.baidu.com&quot;&gt;baidu&lt;/a&gt;*</code></p>
-<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[href] &#123;color:green;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span>&gt;</span>baidu<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则所有具有href属性的元素都会被选择，baidu和sina就会为绿色。</p>
 <p>可以选择多属性，如：</p>
-<p><code>*a[href][title] {color:green;}*</code></p>
-<p><code>*&lt;a href=&quot;http://www.baidu.com&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;*</code></p>
-<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href][title] &#123;color:green;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">title</span>=<span class="string">"baidu"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.sina.com"</span>&gt;</span>sina<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则只有”百度“会变绿。</p>
 <ul>
 <li>属性值选择 </li>
 </ul>
 <p>选择具体到属性的具体属性值，如：</p>
-<p><code>*a[href=&quot;http://www.baidu.com&quot;] {color:green;}*</code></p>
-<p><code>*&lt;a href=&quot;http://www.baidu.com&quot;&gt;baidu&lt;/a&gt;*</code></p>
-<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a[href="http://www.baidu.com"] &#123;color:green;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span>&gt;</span>baidu<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.sina.com"</span>&gt;</span>sina<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则只有baidu会变绿。</p>
 <p>也可以选择多个属性值，如：</p>
-<p><code>*a[href=&quot;http://www.baidu.com&quot;][title=&quot;baidu&quot;]*</code></p>
-<p><code>*{background-color:green;}*</code></p>
-<p><code>*&lt;a href=&quot;http://www.baidu.com&quot; title=&quot;baidu&quot;&gt;百度&lt;/a&gt;*</code></p>
-<p><code>*&lt;a href=&quot;http://www.sina.com&quot;&gt;sina&lt;/a&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a[href="http://www.baidu.com"][title="baidu"]</span><br><span class="line">&#123;background-color:green;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">title</span>=<span class="string">"baidu"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.sina.com"</span>&gt;</span>sina<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>则只有”百度“会变绿。</p>
 <ul>
 <li>属性，属性值部分匹配 </li>
 </ul>
 <p>可以用波浪号”~“只匹配部分进行选择（可以想成约等于），如：</p>
-<p><code>*img[title~=&quot;a&quot;] {border:1px solid black;}*</code></p>
-<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a&quot;&gt;*</code></p>
-<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a 1&quot;/&gt;*</code></p>
-<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a 2&quot;/&gt;*</code></p>
-<p><code>*&lt;img src=&quot;z.jpg&quot; title=&quot;a_2&quot;/&gt;*</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img[title~="a"] &#123;border:1px solid black;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"z.jpg"</span> <span class="attr">title</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"z.jpg"</span> <span class="attr">title</span>=<span class="string">"a 1"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"z.jpg"</span> <span class="attr">title</span>=<span class="string">"a 2"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"z.jpg"</span> <span class="attr">title</span>=<span class="string">"a_2"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <p>前三行都会匹配，但是a_2不匹配（要用子串匹配属性选择器）。</p>
 <ul>
 <li><p>子串匹配属性选择器 </p>
-<p><img src="http://img.hb.aicdn.com/6ea319c56b0bc1630d5cf60bdc187d56ecc05cfdba7f-BRDogK" alt=""></p>
+<p><img src="https://i.loli.net/2018/08/01/5b610bb28c10f.png" alt=""></p>
 </li>
 </ul>
 <h2 id="伪类和伪元素"><a href="#伪类和伪元素" class="headerlink" title="伪类和伪元素"></a>伪类和伪元素</h2><ul>
@@ -319,35 +269,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:hover &#123;color: #FF00FF&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:active &#123;color: #0000FF&#125;</span><br></pre></td></tr></table></figure>
 <p>first-child伪类</p>
-<p><img src="http://img.hb.aicdn.com/8099c74b38a26a8bc1439eac37ce4fd23d4205bf5761-ASYzBT" alt=""></p>
+<p><img src="https://i.loli.net/2018/08/01/5b610bb28ae0e.jpeg" alt=""></p>
 <ul>
 <li>伪元素 </li>
 </ul>
 <p><strong>first-line：</strong></p>
 <p>用于相文中首行设置样式，且只应用于块级元素，可设置的属性有：</p>
-<p>font</p>
-<p>color</p>
-<p>background</p>
-<p>word-spacing</p>
-<p>letter-spacing</p>
-<p>text-decoration</p>
-<p>vertical-align</p>
-<p>text-transform</p>
-<p>line-height</p>
-<p>clear</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">font</span><br><span class="line"></span><br><span class="line">color</span><br><span class="line"></span><br><span class="line">background</span><br><span class="line"></span><br><span class="line">word-spacing</span><br><span class="line"></span><br><span class="line">letter-spacing</span><br><span class="line"></span><br><span class="line">text-decoration</span><br><span class="line"></span><br><span class="line">vertical-align</span><br><span class="line"></span><br><span class="line">text-transform</span><br><span class="line"></span><br><span class="line">line-height</span><br><span class="line"></span><br><span class="line">clear</span><br></pre></td></tr></table></figure>
 <p><strong>first-letter：</strong><br>用于设置文本首个字符的样式，且只能用于块级元素，可设置的属性有：</p>
-<p>font</p>
-<p>color</p>
-<p>background</p>
-<p>margin</p>
-<p>padding</p>
-<p>border</p>
-<p>text-decoration</p>
-<p>text-transform</p>
-<p>vertical-align (仅当 float 为 none 时)</p>
-<p>clear</p>
-<p>line-height</p>
-<p>float</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">font</span><br><span class="line"></span><br><span class="line">color</span><br><span class="line"></span><br><span class="line">background</span><br><span class="line"></span><br><span class="line">margin</span><br><span class="line"></span><br><span class="line">padding</span><br><span class="line"></span><br><span class="line">border</span><br><span class="line"></span><br><span class="line">text-decoration</span><br><span class="line"></span><br><span class="line">text-transform</span><br><span class="line"></span><br><span class="line">vertical-align (仅当 float 为 none 时)</span><br><span class="line"></span><br><span class="line">clear</span><br><span class="line"></span><br><span class="line">line-height</span><br><span class="line"></span><br><span class="line">float</span><br></pre></td></tr></table></figure>
 
       
 

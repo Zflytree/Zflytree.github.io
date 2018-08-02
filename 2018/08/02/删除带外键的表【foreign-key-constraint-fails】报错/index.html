@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="会飞的一棵树的blog">
 <meta property="og:description" content="遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T14:39:59.247Z">
+<meta property="og:updated_time" content="2018-08-02T15:17:39.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="删除带外键的表【foreign key constraint fails】报错">
 <meta name="twitter:description" content="遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太">
@@ -62,7 +62,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/图集/">图集</a></li>
 	        
 			</ul>
 		</nav>
@@ -140,7 +140,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/图集/">图集</a></li>
 		        
 				</ul>
 			</nav>
@@ -178,6 +178,7 @@
         <blockquote>
 <p>遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太多。不过有自然有其的好处就是。</p>
 </blockquote>
+<a id="more"></a> 
 <p>今天在删除一张表的数据的时候报了如下错误：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">09:55:49.144 [http-nio-8080-exec-6] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Cannot <span class="keyword">delete</span> <span class="keyword">or</span> <span class="keyword">update</span> a <span class="keyword">parent</span> <span class="keyword">row</span>: a foreign <span class="keyword">key</span> <span class="keyword">constraint</span> fails (<span class="string">`checkin`</span>.<span class="string">`right_umenu`</span>, <span class="keyword">CONSTRAINT</span> <span class="string">`FKnmg8itd642tdyn6qh1q42h60r`</span> FOREIGN <span class="keyword">KEY</span> (<span class="string">`menu_detailPid`</span>) <span class="keyword">REFERENCES</span> <span class="string">`menu_detail`</span> (<span class="string">`id`</span>))</span><br><span class="line"><span class="number">09</span>:<span class="number">55</span>:<span class="number">49.151</span> [<span class="keyword">http</span>-nio<span class="number">-8080</span>-exec<span class="number">-6</span>] <span class="keyword">ERROR</span> org.hibernate.internal.SessionImpl - HHH000346: <span class="keyword">Error</span> during <span class="keyword">managed</span> <span class="keyword">flush</span> [could <span class="keyword">not</span> <span class="keyword">execute</span> <span class="keyword">statement</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">org.hibernate.exception.ConstraintViolationException: could <span class="keyword">not</span> <span class="keyword">execute</span> <span class="keyword">statement</span></span><br><span class="line">	<span class="keyword">at</span> org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:<span class="number">59</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:<span class="number">42</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:<span class="number">109</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:<span class="number">95</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:<span class="number">207</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:<span class="number">45</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:<span class="number">3198</span>)</span><br><span class="line">	.......</span><br></pre></td></tr></table></figure>
 <p>​    在网上查找后得到的结果和我认为的是一样的，就是外键的问题引发的（当然报错里信息都写了foreign key什么的还不知道，那怎么行(●ˇ∀ˇ●)）。网上是说：表之间强制生成了外键，在删除操作时，数据库会检查表间的关系导致无法删除。</p>
@@ -295,6 +296,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/02/【图集】椎名-ましろ（しいな-ましろ）-Shiina-Mashiro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【图集】椎名 ましろ（しいな ましろ） Shiina Mashiro
+        
+      </div>
+    </a>
   
   
     <a href="/2018/07/30/CSSS选择器总结/" id="article-nav-older" class="article-nav-link-wrap">
@@ -424,11 +434,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+                <a href="javascript:void(0)" class="js-tag color3">图集</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
             
             <div class="clearfix"></div>

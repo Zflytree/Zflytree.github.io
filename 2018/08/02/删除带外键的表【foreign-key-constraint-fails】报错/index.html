@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: css | 会飞的一棵树的blog</title>
+  <title>删除带外键的表【foreign key constraint fails】报错 | 会飞的一棵树的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="萌新一枚">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="会飞的一棵树的blog">
-<meta property="og:url" content="http://yoursite.com/tags/css/index.html">
+  <meta name="description" content="遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太">
+<meta name="keywords" content="数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="删除带外键的表【foreign key constraint fails】报错">
+<meta property="og:url" content="http://yoursite.com/2018/08/02/删除带外键的表【foreign-key-constraint-fails】报错/index.html">
 <meta property="og:site_name" content="会飞的一棵树的blog">
-<meta property="og:description" content="萌新一枚">
+<meta property="og:description" content="遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-02T14:39:59.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="会飞的一棵树的blog">
-<meta name="twitter:description" content="萌新一枚">
+<meta name="twitter:title" content="删除带外键的表【foreign key constraint fails】报错">
+<meta name="twitter:description" content="遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太">
   
     <link rel="alternative" href="/atom.xml" title="会飞的一棵树的blog" type="application/atom+xml">
   
@@ -154,60 +155,183 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-删除带外键的表【foreign-key-constraint-fails】报错" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/CSSS选择器总结/" class="archive-article-date">
-  	<time datetime="2018-07-30T12:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/CSSS选择器总结/">CSSS选择器总结</a>
+    <h1 class="article-title" itemprop="name">
+      删除带外键的表【foreign key constraint fails】报错
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/02/删除带外键的表【foreign-key-constraint-fails】报错/" class="archive-article-date">
+  	<time datetime="2018-08-02T13:59:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>遥想当时正在学hibernate的时候，刚好学到了一对多，多对多的关联操作。时间也正是刚好在那是有了一个项目，把各表的间的结构还理清，俗话说学到就要用到，就把这些表的结构都能配置级联关系的都把它配上。没想到就在这里给自己放了个小坑。前几天在一个帖子中看到别人说，尽量少配些ORM约束，数据库的外键约束什么的。当时还不以为然。没想到我就遇到了这个问题，或许对数据库操还是不是很熟悉的人约束真的不要配太多。不过有自然有其的好处就是。</p>
+</blockquote>
+<p>今天在删除一张表的数据的时候报了如下错误：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">09:55:49.144 [http-nio-8080-exec-6] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Cannot <span class="keyword">delete</span> <span class="keyword">or</span> <span class="keyword">update</span> a <span class="keyword">parent</span> <span class="keyword">row</span>: a foreign <span class="keyword">key</span> <span class="keyword">constraint</span> fails (<span class="string">`checkin`</span>.<span class="string">`right_umenu`</span>, <span class="keyword">CONSTRAINT</span> <span class="string">`FKnmg8itd642tdyn6qh1q42h60r`</span> FOREIGN <span class="keyword">KEY</span> (<span class="string">`menu_detailPid`</span>) <span class="keyword">REFERENCES</span> <span class="string">`menu_detail`</span> (<span class="string">`id`</span>))</span><br><span class="line"><span class="number">09</span>:<span class="number">55</span>:<span class="number">49.151</span> [<span class="keyword">http</span>-nio<span class="number">-8080</span>-exec<span class="number">-6</span>] <span class="keyword">ERROR</span> org.hibernate.internal.SessionImpl - HHH000346: <span class="keyword">Error</span> during <span class="keyword">managed</span> <span class="keyword">flush</span> [could <span class="keyword">not</span> <span class="keyword">execute</span> <span class="keyword">statement</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">org.hibernate.exception.ConstraintViolationException: could <span class="keyword">not</span> <span class="keyword">execute</span> <span class="keyword">statement</span></span><br><span class="line">	<span class="keyword">at</span> org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:<span class="number">59</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:<span class="number">42</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:<span class="number">109</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:<span class="number">95</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:<span class="number">207</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:<span class="number">45</span>)</span><br><span class="line">	<span class="keyword">at</span> org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:<span class="number">3198</span>)</span><br><span class="line">	.......</span><br></pre></td></tr></table></figure>
+<p>​    在网上查找后得到的结果和我认为的是一样的，就是外键的问题引发的（当然报错里信息都写了foreign key什么的还不知道，那怎么行(●ˇ∀ˇ●)）。网上是说：表之间强制生成了外键，在删除操作时，数据库会检查表间的关系导致无法删除。</p>
+<p><strong>解决办法</strong>：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> foreign_key_checks = <span class="number">0</span>;  // 先设置外键约束检查关闭</span><br><span class="line"> </span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> table1;  // 删除表，如果要删除视图，也是如此</span><br><span class="line"> </span><br><span class="line"><span class="keyword">SET</span> foreign_key_checks = <span class="number">1</span>; // 开启外键约束检查，以保持表结构完整性</span><br></pre></td></tr></table></figure>
+<p><strong>原理：</strong></p>
+<p>MySQL的环境变量中存在一个foreign_key_checks，这是默认检查外键的配置项，如果将其设置为0，则表示不检查外键约束。查看foreign_key_checks的值： </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">VARIABLES</span> <span class="keyword">like</span> <span class="string">"foreign%"</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>然而，然而</strong>。我即使把外键约束检查关闭，但是在打开检查的地方又还会报错。这我就无奈了。</p>
+<p>不过我在尝试时把，外键的删除项由 <strong>RESTRICT</strong> 改为 <strong>CASCADE</strong> 时不但能删除且不影响我的另一个方法的执行，而且的更方便的执行了我想写的方法。</p>
+<p>后面又继续查，这是数据库定义外键的一个选项，操作时可以知道update 和delete 后面可以跟的词语有四个 ：</p>
+<p>no action ， set null ， set default ，cascade 。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">no action 表示 不做任何操作，</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> <span class="literal">null</span> 表示在外键表中将相应字段设置为<span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">default</span> 表示设置为默认值(restrict)</span><br><span class="line"></span><br><span class="line"><span class="keyword">cascade</span> 表示级联操作，就是说，如果主键表中被参考字段更新，外键表中也更新，主键表中的记录被删除，外键表中改行也相应删除</span><br></pre></td></tr></table></figure>
+<p>所以当我如此设置的时候就把想做的级联删除也都执行了，数据库的很多东西都还要去补啊。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/02/删除带外键的表【foreign-key-constraint-fails】报错/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/30/CSSS选择器总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSSS选择器总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +354,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关闭开发环境的开发者模式[struts2,hibernate] | 会飞的一棵树的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 12">
+  <meta name="description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 1234......&amp;lt;!-- 设置开发模式,将value值设为false，则关闭 --&amp;gt;   &amp;lt;constant name=&quot;str">
 <meta name="keywords" content="Struts2,Hibernate">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关闭开发环境的开发者模式[struts2,hibernate]">
 <meta property="og:url" content="http://yoursite.com/2018/08/06/关闭开发环境的开发者模式-struts2-hibernate/index.html">
 <meta property="og:site_name" content="会飞的一棵树的blog">
-<meta property="og:description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 12">
+<meta property="og:description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 1234......&amp;lt;!-- 设置开发模式,将value值设为false，则关闭 --&amp;gt;   &amp;lt;constant name=&quot;str">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-06T14:10:41.793Z">
+<meta property="og:updated_time" content="2018-08-08T13:38:24.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关闭开发环境的开发者模式[struts2,hibernate]">
-<meta name="twitter:description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 12">
+<meta name="twitter:description" content="在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。  Struts2关闭开发者模式： 1234......&amp;lt;!-- 设置开发模式,将value值设为false，则关闭 --&amp;gt;   &amp;lt;constant name=&quot;str">
   
     <link rel="alternative" href="/atom.xml" title="会飞的一棵树的blog" type="application/atom+xml">
   
@@ -179,7 +179,7 @@
 <p>在开发的过程中，为了提高开发的效率会打开辅助开发的设置，比如Struts2的开发者模式，Hibernate的语句输出等，这样能方便我们更快的找出错误。但是当在实际使用中是需要把这些东西关掉，这样才能减少资源占用。</p>
 </blockquote>
 <p><strong>Struts2关闭开发者模式：</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line"><span class="comment">&lt;!-- 设置开发模式,将value值设为false，则关闭 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.devMode"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line"> 	......</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p><strong>Hibernate关闭语句输出：</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">		<span class="comment">&lt;!-- 输出底层sql语句,将其改为false --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.show_sql"</span>&gt;</span>false<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 输出底层sql语句格式 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.format_sql"</span>&gt;</span>true<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
@@ -290,6 +290,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/08/【图集】言叶之庭（言の葉の庭）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【图集】言叶之庭（言の葉の庭）
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/05/关于Apache本地能访问外网不能访问的问题/" id="article-nav-older" class="article-nav-link-wrap">
@@ -423,15 +432,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Struts2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hibernate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,7 +444,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" class="js-tag color3">Struts2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hibernate</a>
               </li>
             
             <div class="clearfix"></div>

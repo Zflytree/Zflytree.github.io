@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: css | 会飞的一棵树的blog</title>
+  <title>关于如何记录数据更改记录的两种建表方式 | 会飞的一棵树的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="萌新一枚">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="会飞的一棵树的blog">
-<meta property="og:url" content="http://yoursite.com/tags/css/index.html">
+  <meta name="description" content="当时要做的一个项目要包含一个权限管理功能，以为该系统中的所有人分配权限。而且这个权限管理的需求是可以把权限接近无限的下发（我感觉现实中是不会无限下发的(。・∀・)ノ），这些都先不讲。因为有权限管理就涉及到用户分组的变动，权限的使用等，但是这些操作都是应该要记录下来的。于是有了两种方案。">
+<meta name="keywords" content="数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于如何记录数据更改记录的两种建表方式">
+<meta property="og:url" content="http://yoursite.com/2018/08/08/关于如何记录数据更改记录的两种建表方式/index.html">
 <meta property="og:site_name" content="会飞的一棵树的blog">
-<meta property="og:description" content="萌新一枚">
+<meta property="og:description" content="当时要做的一个项目要包含一个权限管理功能，以为该系统中的所有人分配权限。而且这个权限管理的需求是可以把权限接近无限的下发（我感觉现实中是不会无限下发的(。・∀・)ノ），这些都先不讲。因为有权限管理就涉及到用户分组的变动，权限的使用等，但是这些操作都是应该要记录下来的。于是有了两种方案。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-08T14:42:50.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="会飞的一棵树的blog">
-<meta name="twitter:description" content="萌新一枚">
+<meta name="twitter:title" content="关于如何记录数据更改记录的两种建表方式">
+<meta name="twitter:description" content="当时要做的一个项目要包含一个权限管理功能，以为该系统中的所有人分配权限。而且这个权限管理的需求是可以把权限接近无限的下发（我感觉现实中是不会无限下发的(。・∀・)ノ），这些都先不讲。因为有权限管理就涉及到用户分组的变动，权限的使用等，但是这些操作都是应该要记录下来的。于是有了两种方案。">
   
     <link rel="alternative" href="/atom.xml" title="会飞的一棵树的blog" type="application/atom+xml">
   
@@ -154,60 +155,250 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于如何记录数据更改记录的两种建表方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/30/CSSS选择器总结/" class="archive-article-date">
-  	<time datetime="2018-07-30T12:11:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/30/CSSS选择器总结/">CSSS选择器总结</a>
+    <h1 class="article-title" itemprop="name">
+      关于如何记录数据更改记录的两种建表方式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/08/关于如何记录数据更改记录的两种建表方式/" class="archive-article-date">
+  	<time datetime="2018-08-08T14:07:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>当时要做的一个项目要包含一个权限管理功能，以为该系统中的所有人分配权限。而且这个权限管理的需求是可以把权限接近无限的下发（我感觉现实中是不会无限下发的(。・∀・)ノ），这些都先不讲。因为有权限管理就涉及到用户分组的变动，权限的使用等，但是这些操作都是应该要记录下来的。于是有了两种方案。</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="1-通过一张单独的事件记录表来记录事件："><a href="#1-通过一张单独的事件记录表来记录事件：" class="headerlink" title="1.通过一张单独的事件记录表来记录事件："></a>1.通过一张单独的事件记录表来记录事件：</h4><table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>eventid</th>
+<th>etime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>id是自增</li>
+<li>uid是指用户的id,就是事件的对象</li>
+<li>eventid是事件id,有另外一张表列出所有可能的事件，eventid为其id</li>
+<li>etime:事件的时间</li>
+</ul>
+<h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><ol>
+<li>这种方法比较直观，比较容易能想到。</li>
+<li>操作也不是很麻烦</li>
+</ol>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ol>
+<li>同时要操作多张表（比如要将一个人的权限删除，那么在权限表中要将其对应的记录删除，在记录表中要对这个事件进行记录）。</li>
+<li>需要列车所有操作的可能（这好像也不是啥缺点（。＾▽＾））。</li>
+</ol>
+<h4 id="2-通过增加时间字段来记录事件"><a href="#2-通过增加时间字段来记录事件" class="headerlink" title="2.通过增加时间字段来记录事件"></a>2.通过增加时间字段来记录事件</h4><p>比如有一张用户-分组的表：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>uid</th>
+<th>gid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>id主键自增</li>
+<li>uid用户id</li>
+<li>gid权限组id</li>
+</ul>
+<p>如果是按照第一种方法，当一个人被分入某个权限组时，则向这张表添加相应记录，还要向记录表添加纪录。但是如果多了两个字段，starttime(起始时间)，endtime（结束时间），那么就不一样了。</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>starttime</th>
+<th>endtime</th>
+<th>uid</th>
+<th>gid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>当一个用户被分配到某分组时，记录这个时间放在starttime中，当一个用户被踢出分组是记录踢出时间放到endtime中。这样的话，只要检测endtime中是否有值就可以判断用户的状态了，这样这表的作用就不仅是记录分组情况了，而且也保留记录了。</p>
+<h5 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h5><ol>
+<li>需要建的表少了。</li>
+<li>当有操作时不需要删除记录，只需记录时间，操作的表也少了。</li>
+</ol>
+<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点:"></a>缺点:</h5><ol>
+<li>如果某张表有频繁的操作则很容易造成数据冗余。</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/08/关于如何记录数据更改记录的两种建表方式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/08/【图集】言叶之庭（言の葉の庭）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【图集】言叶之庭（言の葉の庭）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +421,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

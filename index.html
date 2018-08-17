@@ -196,14 +196,9 @@
 <p>在拼接字符串的时候，经常会发现多了，不想要的字符，让人很是烦恼，这下面总结三个可以去掉烦恼的方法。</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//循环生成json格式数据</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">CreateJson</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		String json=<span class="string">"&#123;\"content\":["</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++) &#123;</span><br><span class="line">			json+=<span class="string">"&#123;\"value\":"</span>+i+<span class="string">"&#125;,"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		json+=<span class="string">"]&#125;"</span>;</span><br><span class="line">		<span class="keyword">return</span> json;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h5 id="上面的代码生成的json格式数据（最后多了一个逗号）："><a href="#上面的代码生成的json格式数据（最后多了一个逗号）：" class="headerlink" title="上面的代码生成的json格式数据（最后多了一个逗号）："></a>上面的代码生成的json格式数据（最后多了一个逗号）：</h5></blockquote>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"content"</span>: [&#123;</span><br><span class="line">		<span class="attr">"value"</span>: <span class="number">0</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">"value"</span>: <span class="number">1</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">"value"</span>: <span class="number">2</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">"value"</span>: <span class="number">3</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">"value"</span>: <span class="number">4</span></span><br><span class="line">	&#125;，]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="方法一：若已知循环的次数，则可以通过if判断解决："><a href="#方法一：若已知循环的次数，则可以通过if判断解决：" class="headerlink" title="方法一：若已知循环的次数，则可以通过if判断解决："></a>方法一：若已知循环的次数，则可以通过if判断解决：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="方法二：使用subString截取字符串："><a href="#方法二：使用subString截取字符串：" class="headerlink" title="方法二：使用subString截取字符串："></a>方法二：使用subString截取字符串：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="方法三：将String类型转换为StringBuffer-再删除"><a href="#方法三：将String类型转换为StringBuffer-再删除" class="headerlink" title="方法三：将String类型转换为StringBuffer,再删除"></a>方法三：将String类型转换为StringBuffer,再删除</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">CreateJson</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		String json=<span class="string">"&#123;\"content\":["</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++) &#123;</span><br><span class="line">			json+=<span class="string">"&#123;\"value\":"</span>+i+<span class="string">"&#125;,"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		json+=<span class="string">"]&#125;"</span>;</span><br><span class="line">		<span class="comment">//将String转换为StringBuffer</span></span><br><span class="line">		StringBuffer buffer = <span class="keyword">new</span> StringBuffer(json);</span><br><span class="line">		<span class="comment">//删除逗号</span></span><br><span class="line">		buffer.delete(buffer.length()-<span class="number">3</span>, buffer.length()-<span class="number">2</span>);</span><br><span class="line">		<span class="comment">//再将StringBuffer转换为String</span></span><br><span class="line">		json = <span class="keyword">new</span> String(buffer);</span><br><span class="line">		<span class="keyword">return</span> json;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>总结：方法一和方法二都还是比较常用的，不过个人感觉方法二在处理很长的字符串时可能会效率不高，方法三就感觉略有麻烦了。</p>
-
+        
+          <a class="article-more-a" href="/2018/08/17/拼凑字符串时，去除末尾字符的几个方法/#more">more >></a>
+        
       
 
       
@@ -1076,7 +1071,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1089,18 +1096,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hibernate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">方法</a>
               </li>
             
             <div class="clearfix"></div>

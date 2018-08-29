@@ -9,18 +9,18 @@
   <link rel="dns-prefetch" href="http://zflytree.com">
   <title>【初识Spring】对象（Bean）实例化及属性注入（xml方式） | 会飞的一棵树的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性   ##xml配置的方式进行实例化  配置文件中bean标签的属性  （1）id属性：起名称，i">
+  <meta name="description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性">
 <meta name="keywords" content="Java,Web,Spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【初识Spring】对象（Bean）实例化及属性注入（xml方式）">
 <meta property="og:url" content="http://zflytree.com/2018/08/29/【初识Spring】对象（Bean）实例化及属性注入（xml方式）/index.html">
 <meta property="og:site_name" content="会飞的一棵树的blog">
-<meta property="og:description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性   ##xml配置的方式进行实例化  配置文件中bean标签的属性  （1）id属性：起名称，i">
+<meta property="og:description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-29T09:39:54.769Z">
+<meta property="og:updated_time" content="2018-08-29T09:42:55.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【初识Spring】对象（Bean）实例化及属性注入（xml方式）">
-<meta name="twitter:description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性   ##xml配置的方式进行实例化  配置文件中bean标签的属性  （1）id属性：起名称，i">
+<meta name="twitter:description" content="#初识Spring之Bean实例化及属性注入 1.通过xml配置的方式进行实例化。  配置文件中bean标签的常用属性 通过无参构造（常用） 使用静态工厂进行创建 使用实例工厂进行创建  2.属性注入。  使用有参数构造方法注入属性 使用set方法注入属性（常用） 注入对象类型属性 注入复杂类型属性">
   
     <link rel="alternative" href="/atom.xml" title="会飞的一棵树的blog" type="application/atom+xml">
   
@@ -208,6 +208,7 @@
 <li><strong>注入复杂类型属性</strong></li>
 </ul>
 <hr>
+<a id="more"></a>
 <p>##xml配置的方式进行实例化</p>
 <ul>
 <li><strong>配置文件中bean标签的属性</strong></li>
@@ -522,6 +523,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -538,23 +543,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Struts2</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hibernate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
